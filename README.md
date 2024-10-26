@@ -1,76 +1,31 @@
-# HTF24-Team-001
+# IPL_score_pridiction
+I worked on a web app using Flask. Give Inputs as (batting_team, bowling_team, overs, runs, wickets, runs_in_prev_5_overs, wickets_in_prev_5_overs) and it will predict the approximate score the batting team may score within 20 overs. 
 
-## GitHub submission guide
+# Dataset:
+IPL.csv.
+* 1 - Time Series Columns, 2 - Categorical Columns and remaining Numerical Columns handled during EDA. Created 23 Feature Columns from 15 Features.
 
-In this Readme, you will find a guide on how to fork this Repository, add files to it, and make a pull request to contribute your changes.
+To Achieve Best Accuracy and To Reduce Overfitting Problem, I used Linear Ridge Regressor (With Hyperparameter tuning - GridSearchCV)
 
-<details open>
-<summary><h3>1. Login to your GitHub Account by heading over to <a href="https://github.com">github.com</a></h3></summary>
-<br>
-<ul>
-   <li>Open the <a href="https://github.com/cbitosc/HTF24-Team-001">current repo</a> in a new tab.</li>
-   <li>Perform all operations in the newly opened tab, and follow the current tab for instructions.</li>
-</ul>
-</details>
-
-<details>
-<summary><h3>2. Fork the Repository</h3></summary>
-<br>
-<ul>
- <li>In the newly opened tab, on the top-right corner, click on <b>Fork</b></li>
- <img src="/images/fork.png">
-
- <li>Enter the <b>Repository Name</b> as <b>HTF24-Team-001</b>.</li>
- <li>Then click <b>Create Fork</b> leaving all other fields to their default value.</li>
- <img src="/images/create-fork.png">
- <li>After a few moments, you can view the repo.</li>
-</ul>
-</details>
-
-<details>
-<summary><h3>3. Clone your Repository</h3></summary>
-<br>
-<ul>
- <li>Click on <b>Code</b> and from the dropdown menu copy your <b>web URL</b> in your forked Repository. </li>
- <img src="/images/clone1.png">
- <li>Now open terminal on your local machine.</li>
- <li>Use the following command to clone your forked Repository:</li>
-<code> git clone https://github.com/your-username/HTF24-Team-001.git </code>
-<hr>
- <img src="/images/clone2.png">
-
-</ul>
-</details>
-
-<details>
-<summary><h3>4. Adding files to the Repository</h3></summary>
-<br/>
-<ul>
- <li>While doing it for the first time, create a new branch for your changes.</li>
-   <code> git checkout -b branch-name </code>
-   <li>Add your files or make modifications to existing files.</li>
-   <li>Stage your changes:</li>
-   <code> git add . </code>
-   <li>Commit your changes:</li>
-   <code> git commit -m "Descriptive commit message" </code>
-   <li>Push changes to your fork </li>
-   <code> git push origin branch-name </code>
-   <hr>
+# ABOUT :
+Took IPL Data & performed Data Wrangling. During EDA handling Categorical data is major task. Trained Linear Ridge Regressor model. After Prediction calculated Errors & Model Score. To Reduce Errors & to boost model score used GridSearchCV for Hyper Parameter Tuning. 
    
- <img src="/images/push.png">
-</ul>
-</details>
+# Parameters Obtained After Hyperparameter Tuning - 
+ {'alpha': 40}
+ 
+# Score Obtained After Hyperparameter Tuning - 
+-328.42
+  
+# Values After Hyperparameter Tuning
+   MAE :-  12.12,
+   MSE :-  251.03,
+   RMSE :-  15.84
 
-<details>
-<summary><h3>5. Create a Pull Request</h3></summary>
-   <br>
-<ul>
- <li>Finally, click on the <b>Contribute</b> button and choose <b>Open Pull Request</b>.</li>
- <img src="/images/PR1.png">
- <li>Leaving all fields to their default values, click on <b>Create Pull Request</b>.</li>
- <img src="/images/PR2.png">
- <li>Wait for a few moments, then you are all done</li>
-</ul>
-</details>
+# Achieved    r2_score -   0.75
 
-## Thanks for participating!
+
+# Contributors:
+> Sharad Kumar Tiwari
+
+
+
